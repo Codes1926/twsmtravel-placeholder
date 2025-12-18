@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0A2940" />
+  <title>Travel With Sean & Meghan — Links</title>
+  <meta name="description" content="Official link hub for Travel With Sean & Meghan: videos, 360 tours, hotels, and more." />
+
+  <style>
+    :root{
+      --navy:#0A2940;
+      --sky:#1E90FF;
+      --bg:#ffffff;
+      --text:#0b1220;
+      --muted:#5b667a;
+      --card:#ffffff;
+      --border:rgba(10,41,64,.12);
+      --shadow: 0 10px 30px rgba(10,41,64,.10);
+      --radius: 18px;
+      --tap: 56px;
+      --max: 520px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: radial-gradient(1200px 600px at 50% -100px, rgba(30,144,255,.10), transparent 60%),
+                  radial-gradient(900px 450px at 50% 120%, rgba(10,41,64,.08), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, "SF Pro Display", "SF Pro Text",
+                   "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.35;
+    }
+
+    .wrap {
+      min-height: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 28px 16px 44px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: var(--max);
+      background: rgba(255,255,255,.92);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      padding: 22px 18px 18px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+      padding: 6px 6px 14px;
+    }
+
+    .logo {
+      width: 96px;
+      height: 96px;
+      border-radius: 999px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 20px rgba(10,41,64,.12);
+      background: #fff;
+    }
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 750;
+      letter-spacing: .2px;
+      color: var(--navy);
+      margin: 0;
+    }
+
+    .tagline {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .links {
+      display: grid;
+      gap: 12px;
+      margin-top: 10px;
+      padding: 0 2px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+
+      min-height: var(--tap);
+      padding: 14px 14px 14px 16px;
+
+      border-radius: 16px;
+      border: 1px solid rgba(10,41,64,.16);
+      background: var(--navy);
+      color: #fff;
+      text-decoration: none;
+
+      box-shadow: 0 10px 18px rgba(10,41,64,.18);
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .btn .left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.18);
+      flex: 0 0 auto;
+      font-size: 16px;
+    }
+
+    .label {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .label strong {
+      font-size: 15px;
+      letter-spacing: .2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .label span {
+      font-size: 12px;
+      color: rgba(255,255,255,.78);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .chev {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.16);
+      flex: 0 0 auto;
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .btn:focus-visible {
+      outline: 3px solid rgba(30,144,255,.45);
+      outline-offset: 3px;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+    .btn:hover, .btn:focus-visible {
+      border-color: rgba(30,144,255,.55);
+      box-shadow: 0 14px 24px rgba(10,41,64,.22);
+    }
+
+    .btn.secondary {
+      background: #fff;
+      color: var(--navy);
+      border: 1px solid rgba(10,41,64,.18);
+      box-shadow: 0 10px 18px rgba(10,41,64,.10);
+    }
+    .btn.secondary .icon,
+    .btn.secondary .chev{
+      background: rgba(10,41,64,.06);
+      border: 1px solid rgba(10,41,64,.10);
+    }
+    .btn.secondary .label span { color: rgba(10,41,64,.70); }
+
+    .btn.ghost {
+      background: rgba(10,41,64,.04);
+      color: var(--navy);
+      border: 1px solid rgba(10,41,64,.12);
+      box-shadow: none;
+    }
+    .btn.ghost .icon,
+    .btn.ghost .chev{
+      background: rgba(10,41,64,.05);
+      border: 1px solid rgba(10,41,64,.10);
+    }
+    .btn.ghost .label span { color: rgba(10,41,64,.70); }
+
+    footer {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(10,41,64,.10);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .social {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .pill {
+      text-decoration: none;
+      color: var(--navy);
+      border: 1px solid rgba(10,41,64,.14);
+      background: rgba(255,255,255,.9);
+      padding: 10px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      line-height: 1;
+      transition: transform .12s ease, border-color .12s ease;
+    }
+    .pill:hover { transform: translateY(-1px); border-color: rgba(30,144,255,.55); }
+    .pill:focus-visible { outline: 3px solid rgba(30,144,255,.45); outline-offset: 3px; }
+
+    .fineprint {
+      color: var(--muted);
+      font-size: 12px;
+      margin: 0;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .btn, .pill { transition: none; }
+      .btn:hover, .pill:hover { transform: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <main class="card" role="main">
+      <header>
+        <!-- Use your logo asset here. Put it in /links/assets/ and update src accordingly. -->
+        <div class="logo" aria-hidden="true">
+          <img src="./assets/TWSM_Logo_Navy_WhiteBG_6000.jpeg" alt="Travel With Sean & Meghan logo">
+        </div>
+
+        <h1 class="title">Travel With Sean &amp; Meghan</h1>
+        <p class="tagline">Honest travel • 360 tours • practical value</p>
+      </header>
+
+      <section class="links" aria-label="Main links">
+        <!-- Replace href values with your real destinations -->
+        <a class="btn" href="https://www.youtube.com/@YOUR_CHANNEL" target="_blank" rel="noopener">
+          <span class="left">
+            <span class="icon" aria-hidden="true">▶</span>
+            <span class="label">
+              <strong>Watch the latest video</strong>
+              <span>YouTube (full walkthroughs)</span>
+            </span>
+          </span>
+          <span class="chev" aria-hidden="true">›</span>
+        </a>
+
+        <a class="btn" href="https://travelwithseanandmeghan.com/hotels" target="_blank" rel="noopener">
+          <span class="left">
+            <span class="icon" aria-hidden="true">🏨</span>
+            <span class="label">
+              <strong>Explore hotels</strong>
+              <span>Photos, notes, and room details</span>
+            </span>
+          </span>
+          <span class="chev" aria-hidden="true">›</span>
+        </a>
+
+        <a class="btn" href="https://travelwithseanandmeghan.com/tours" target="_blank" rel="noopener">
+          <span class="left">
+            <span class="icon" aria-hidden="true">🧭</span>
+            <span class="label">
+              <strong>View 360° tours</strong>
+              <span>Immersive walkthroughs</span>
+            </span>
+          </span>
+          <span class="chev" aria-hidden="true">›</span>
+        </a>
+
+        <a class="btn secondary" href="https://travelwithseanandmeghan.com/app" target="_blank" rel="noopener">
+          <span class="left">
+            <span class="icon" aria-hidden="true">📱</span>
+            <span class="label">
+              <strong>Get the app</strong>
+              <span>Coming soon (iOS + Android)</span>
+            </span>
+          </span>
+          <span class="chev" aria-hidden="true">›</span>
+        </a>
+
+        <a class="btn ghost" href="https://travelwithseanandmeghan.com" target="_blank" rel="noopener">
+          <span class="left">
+            <span class="icon" aria-hidden="true">🌐</span>
+            <span class="label">
+              <strong>Visit the website</strong>
+              <span>All destinations and resources</span>
+            </span>
+          </span>
+          <span class="chev" aria-hidden="true">›</span>
+        </a>
+      </section>
+
+      <footer>
+        <nav class="social" aria-label="Social links">
+          <!-- Update these -->
+          <a class="pill" href="https://www.tiktok.com/@YOUR_HANDLE" target="_blank" rel="noopener">TikTok</a>
+          <a class="pill" href="https://www.instagram.com/YOUR_HANDLE" target="_blank" rel="noopener">Instagram</a>
+          <a class="pill" href="https://www.youtube.com/@YOUR_CHANNEL" target="_blank" rel="noopener">YouTube</a>
+          <a class="pill" href="mailto:contact@travelwithseanandmeghan.com">Email</a>
+        </nav>
+
+        <p class="fineprint">
+          © <span id="year"></span> Travel With Sean &amp; Meghan
+        </p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Tiny optional script for the year; safe to remove if you want pure HTML/CSS -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
